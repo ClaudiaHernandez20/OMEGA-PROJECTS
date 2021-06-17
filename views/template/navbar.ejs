@@ -1,0 +1,69 @@
+<!--<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">OMEGA PROJECTS</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+      <%if (user) { %>
+        <ul class="navbar-nav me-auto my-2 my-sm-0">
+          <li class="nav-item">
+            <a href="#" class="nav-link">Ejemplo</a>
+          </li>
+        </ul>
+        <form class="form-inline">
+          <ul class="navbar-nav me-auto my-2 my-sm-0">
+            <li class="nav-item">
+              <a href="/logout" class="nav-link">Cerrar Sesión</a>
+            </li>
+          </ul>
+        </form>
+
+        <% } %>
+    </div>
+  </div>
+</nav>-->
+
+<header id="header" class="transparent-nav">
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      <ul class="navbar-nav me-auto my- my-sm-0">
+          <li class="nav-item">
+              <label class="nav-link"
+                  style="color: #000; margin-right: 15px;font-size: 15px;">       </label>
+          </li>
+      </ul>
+      
+      <a href="/inicio"><img src="/img/1.png" alt="logo" width="72" height="72"></src></a>
+      <div class="container-fluid">
+          <a href="/inicio" class="navbar-brand" style="color:#ffffff" ;>OMEGA PROJECTS</a>
+      </div>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto my-2 my-sm-0">
+          <li class="nav-item">
+            <a href="#" class="nav-link">Ejemplo</a>
+          </li>
+        </ul>
+
+        <%if (user) { %>
+          
+          <ul class="navbar-nav me-auto my-2 my-sm-0">
+            <li class="nav-item">
+              <a href="#" class="nav-link">Ejemplo</a>
+            </li>
+          </ul>
+          <form class="form-inline">
+            <ul class="navbar-nav me-auto my-2 my-sm-0">
+              <li class="nav-item">
+                <a href="/logout" class="nav-link">Cerrar Sesión</a>
+              </li>
+            </ul>
+          </form>
+  
+          <% } %>
+      </div>
+  </nav>
+</header>
+
