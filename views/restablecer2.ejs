@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Omega Projects | Establecer nueva contraseña</title>
+    <link rel="shortcut icon" href="/img/1.png">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.6 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+        integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel='stylesheet'
+        href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        div.b {
+            text-align: left;
+        }
+    </style>
+
+</head>
+
+<body style="background-color:#0d1937;">
+<!--
+    <header id="header" class="transparent-nav">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+            <ul class="navbar-nav me-auto my- my-sm-0">
+                <li class="nav-item">
+                    <label class="nav-link"
+                        style="color: #000; margin-right: 15px;font-size: 15px;">       </label>
+                </li>
+            </ul>
+            <a href="/"><img src="/img/1.png" alt="logo" width="72" height="72"></src></a>
+            <div class="container-fluid">
+                <a href="/" class="navbar-brand" style="color:#ffffff" ;>OMEGA PROJECTS</a>
+            </div>
+        </nav>
+    </header>-->
+
+    <%if (error.length > 0 ) { %>
+        <%- include("./template/mensajeError") %>
+    <% } %>
+<!--
+    <div class="container p-4">
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <div class="card text-center">
+
+                    </style>
+                    <div class="row">
+
+                        <img src="/img/OMEGA PROJECTS.gif" alt="LOGO"
+                            style="width:220px; height:200px; margin-top: 0px;" class="mx-auto">
+
+                        <figure class="text-center" style="margin-top: 0px; ">
+                            <blockquote class="blockquote" style="font-size: 20px;">
+                                <p><strong>Establecer nueva contraseña</strong></p>
+                            </blockquote>
+                        </figure>
+
+                        <form action="/restablecer" method="POST">
+                            
+                            <div class="mb-3 d-grid gap-2 col-12 b">
+                                <label for="exampleInputPassword1" class="form-label">Ingrese una contraseña
+                                    nueva:</label>
+                                <input type="password" class="password" id="txt_Contrasenia" name="txt_Contrasenia"
+                                    onkeyup='check();' required/>
+
+                            </div>
+                            <div class="mb-3 d-grid gap-2 col-12 b">
+                                <label for="exampleInputPassword1" class="form-label">Repetir contraseña nueva:</label>
+                                <input type="password" class="password" id="txt_Contrasenia2" name="txt_Contrasenia2"
+                                    onkeyup='check();' required/>
+                            </div>
+                            <label for="">
+                                <span id='message'></span>
+                            </label>
+                            
+                            <div class="d-grid gap-4 col-5 mx-auto" style="margin-top: 23px; margin-bottom: 40px;">
+                                <button style="font-size:130%" class="btn btn-outline-dark" id="btn_siguiente">
+                                    Siguiente
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>-->
+    <br>
+    <div class="container">
+
+        <!-- Outer Row -->
+        <div class="row justify-content-center">
+
+            <div class="col-xl-9 col-lg-12 col-md-11">
+
+                <div class="card o-hidden border-0 shadow-lg my-5">
+                    <div class="card-body p-0">
+                        <!-- Nested Row within Card Body -->
+                        <div class="row">
+                            <div class="col-lg-6 d-none d-lg-block text-center mt-auto mb-auto">
+                                <img class="img-fluid" src="/img/LOGO-COMPLETO.jpg" alt="...">
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="p-5">
+                                    <div class="text-center">
+                                        <h1 class="h4 text-gray-900 mb-2">Cambio de contraseña</h1>
+                                        <p class="mb-4"><label
+                                                id="emailRestartPassword">usuario@omegaprojects.com</label><br>
+                                            Ingresa tu nueva contraseña</p>
+                                    </div>
+                                    <form class="user" action="/restablecer" method="POST">
+                                        <div class="form-group">
+                                            <input type="password" class="form-control form-control-user"
+                                                id="txt_Contrasenia" name="txt_Contrasenia"
+                                                aria-describedby="reset password" placeholder="Ingrese su contraseña..."
+                                                onkeyup='check();' required>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password" class="form-control form-control-user"
+                                                id="txt_Contrasenia2" name="txt_Contrasenia2" aria-describedby="Confirm"
+                                                placeholder="Confirme su contraseña..." onkeyup='check();' required>
+                                        </div>
+                                        <label for="">
+                                            <span id='message' style="margin-bottom: 20px; text-align:center;"></span>
+                                        </label>
+                                        <button class="btn btn-primary btn-user btn-block" href="#" data-toggle="modal"
+                                            data-target="#exampleModal" id="btn_siguiente" style="margin-top: 20px;">
+                                            <i class="fab fa-fw"></i>
+                                            Recuperar Contraseña
+                                        </button>
+                                    </form>
+                                    <hr>
+                                  <!--<div class="text-center">
+                                        <a class="small" href="register.html">Create an Account!</a>
+                                    </div>
+                                    <div class="text-center">
+                                        <a class="small" href="login.html">Already have an account? Login!</a>
+                                    </div>-->
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <script>
+        var check = function () {
+            if (document.getElementById('txt_Contrasenia').value ==
+                document.getElementById('txt_Contrasenia2').value && document.getElementById('txt_Contrasenia').value != ''
+                && document.getElementById('txt_Contrasenia2').value != '') {
+                document.getElementById('message').style.color = 'green';
+                document.getElementById('message').innerHTML = 'Coinciden las contraseñas, de click en siguiente';
+                document.getElementById("btn_siguiente").disabled = false;
+            } else {
+                document.getElementById('message').style.color = 'red';
+                document.getElementById('message').innerHTML = 'Contraseñas no coinciden, operación bloqueada';
+                document.getElementById("btn_siguiente").disabled = true;
+            }
+        }
+    </script>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+    <%- include("./template/footer") %>
